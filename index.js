@@ -142,19 +142,19 @@ function prettyFactory (options) {
       line = `${line} ${prettifiedTime}`
     }
 
+    if (prettifiedMetadata) {
+      if (line.length > 0) {
+        line = `${line} ${prettifiedMetadata}`
+      } else {
+        line = prettifiedMetadata
+      }
+    }
+
     if (!opts.levelFirst && prettifiedLevel) {
       if (line.length > 0) {
         line = `${line} ${prettifiedLevel}`
       } else {
         line = prettifiedLevel
-      }
-    }
-
-    if (prettifiedMetadata) {
-      if (line.length > 0) {
-        line = `${line} ${prettifiedMetadata}:`
-      } else {
-        line = prettifiedMetadata
       }
     }
 
