@@ -158,10 +158,6 @@ function prettyFactory (options) {
       }
     }
 
-    if (line.endsWith(':') === false && line !== '') {
-      line += ':'
-    }
-
     if (prettifiedMessage) {
       if (line.length > 0) {
         line = `${line} ${prettifiedMessage}`
